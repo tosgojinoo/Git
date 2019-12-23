@@ -1,6 +1,6 @@
 # Git 사용법
 
-## Repository 변경
+## Repository 관리
 
 ### 기존 Repo pull / push
 ```
@@ -19,6 +19,14 @@ git remote remove origin
 ```
 git remote add origin https://github.com/"계정"/"Repo명"
 ```
+
+### git push 에러 발생시
+```
+# new repo 만들때, README.md 파일을 함께 만들 경우 에러 발생
+git pull origin master --allow-unrelated-histories
+git commit
+```
+
 
 ## 파일 관리
 ### 파일 삭제
@@ -43,3 +51,6 @@ git commit
 ```
 git status
 ```
+
+
+
