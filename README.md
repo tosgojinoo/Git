@@ -48,6 +48,7 @@ git push -u origin master
 ### git push 에러 발생시
 ```
 # new repo 만들때, README.md 파일을 함께 만들 경우 에러 발생
+git pull
 git pull origin master --allow-unrelated-histories
 git commit
 ```
