@@ -1,13 +1,30 @@
 # Git 사용법
 
-## Repository 관리
-
-### 기존 Repo pull / push
+## 초기 세팅
+### https://github.com 가입
+### https://git-scm.com/downloads 설치
 ```
-git pull
-git add .
-git commit -m "clean push"
-git push
+# 버전 확인
+git version
+# 초기설정
+git config --global user.name "Your Name Here"
+git config --global user.email "your_email@youremail.com"
+```
+### 새 Repo 만들기
+github.com 로그인 -> new repository -> Repository name 입력, README 파일 없음 -> Create repository
+-> 해당 로컬 폴더 이동 -> terminal 실행 -> "create a new repository on the command line" 따라 실행
+
+
+## Repository 관리
+###  Repo 연결
+```
+# 해당 로컬폴더로 이동 후
+# 저장소 초기화
+git init
+# 저장소 연결
+git remote add origin https://github.com/"계정"/"Repo명.git"
+# 연결상태 확인
+git remote -v
 ```
 
 ### 기존 Repo remote 제거
@@ -15,9 +32,17 @@ git push
 git remote remove origin
 ```
 
-### 새 Repo remote 추가
+
+
+### 기존 Repo pull / push
 ```
-git remote add origin https://github.com/"계정"/"Repo명"
+git pull
+# 전체 파일 add
+git add .
+# commit 명령어로 스냅샷 찍음.
+git commit -m "clean push"
+# 마스터 브런치에 업로드
+git push -u origin master
 ```
 
 ### git push 에러 발생시
